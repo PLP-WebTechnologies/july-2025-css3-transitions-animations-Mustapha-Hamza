@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 2rem;
+}
+
+/* Part 1: CSS Transitions & Animations */
+#hoverBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#hoverBtn:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Keyframes Animation */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 20px auto;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background: coral; }
+  50% { transform: scale(1.2); background: gold; }
+  100% { transform: scale(1); background: coral; }
+}
+
+/* Part 3: Popup */
+.popup {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: top 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+.popup.show {
+  top: 20%;
+  opacity: 1;
+}
